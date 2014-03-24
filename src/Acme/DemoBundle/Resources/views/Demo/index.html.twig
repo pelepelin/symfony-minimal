@@ -1,14 +1,23 @@
-{% extends "AcmeDemoBundle::layout.html.twig" %}
+{% extends "TwigBundle::layout.html.twig" %}
 
-{% block title "Symfony - Demos" %}
+{% block head %}
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+{% endblock %}
 
-{% block content_header '' %}
+{% block title 'Demo Bundle' %}
 
-{% block content %}
-    <h1 class="title">Available demos</h1>
-    <ul id="demo-list">
-        <li><a href="{{ path('_demo_hello', {'name': 'World'}) }}">Hello World</a></li>
-        <li><a href="{{ path('_demo_secured_hello', {'name': 'World'}) }}">Access the secured area</a> <a href="{{ path('_demo_login') }}">Go to the login page</a></li>
-        {# <li><a href="{{ path('_demo_contact') }}">Send a Message</a></li> #}
-    </ul>
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-message">
+            <em>Notice</em>: {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    <div class="block">
+        <h1 class="title">AcmeDemoBundle</h1>
+        <p>
+            This page is left as a bare minimum to check that everything works.
+        </p>
+    </div>
+
 {% endblock %}
