@@ -1,3 +1,48 @@
+Symfony Minimal Edition
+=======================
+
+What is it?
+-----------
+
+Symfony Standard Edition without unnecessary bundles.
+
+Quite often in my work I need a brand new Symfony framework installation
+for a quick experiment, testing of a bundle, or initial setup for a new website
+development. Symfony Standard Edition comes with several bundles to demonstrate
+its features and you probably do not need them.
+
+This project is intended as a quick start when you know what you need.
+
+Installation
+------------
+
+Find available branches on https://github.com/checat/symfony-minimal/branches
+
+Clone github repo from https://github.com/checat/symfony-minimal and switch to a branch of your choice.
+
+You can review last commits in the branch to see what was changed from original Symfony.
+
+If you want, you may also revert some commits to quickly get back a removed feature.
+Or you can start from original and cherry-pick selected commits instead. Or you can cherry-pick
+selected commits over another commit from original Symfony and hope they will apply cleanly.
+
+Then download composer with `curl -s http://getcomposer.org/installer | php`
+and  run `php composer.phar update` to install all dependencies.
+
+Then follow with Symfony as usual.
+
+Repository notes
+----------------
+
+I'm going to keep the original Symfony branches and apply my commits to make
+changes as clear as possible. That means this repository will have the same
+commits for every supported branch and will not have any visible merges. If any bugs
+will be found in my commits, fix commit will be squashed and all branches will
+be rebased. So see this repo as a set of patches over the original releases.
+
+
+Original README text is below.
+
 Symfony Standard Edition
 ========================
 
